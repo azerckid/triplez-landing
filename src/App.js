@@ -7,8 +7,36 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  color: white;
 `;
+const MainBox = styled.div`
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+const CanvasBox = styled.div``;
+const TriplEZ = styled.div`
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  width: 100vw;
+  z-index: 1;
+  color: #fff;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  font-size: 40px;
+`;
+const Segmant = styled.div`
+  width: 100vw;
+  height: 300px;
+  background-color: blue;
+`;
 function App() {
   const canvasRef = useRef(null);
 
@@ -18,7 +46,7 @@ function App() {
     canvas.height = window.innerHeight;
 
     let w = canvas.width;
-    let h = canvas.width;
+    let h = canvas.height;
 
     const opts = {
       particleColor: "rgb(200,200,200)",
@@ -60,7 +88,7 @@ function App() {
       }
     };
 
-    function Particle(xPos, yPos) {
+    let Particle = function (xPos, yPos) {
       this.x = Math.random() * w;
       this.y = Math.random() * h;
       this.speed = opts.defaultSpeed + Math.random() * opts.variantSpeed;
@@ -95,7 +123,7 @@ function App() {
         drawArea.fillStyle = this.color;
         drawArea.fill();
       };
-    }
+    };
 
     let particles = [];
     function setup() {
@@ -126,11 +154,17 @@ function App() {
 
   return (
     <Container>
-      <div>HELLO WORLD</div>
-      <div>
-        <div>HELLO CANVAS</div>
-        <canvas ref={canvasRef}></canvas>
-      </div>
+      <MainBox>
+        <CanvasBox>
+          <canvas ref={canvasRef}></canvas>
+        </CanvasBox>
+        <TriplEZ>
+          <div>triplEZ</div>
+        </TriplEZ>
+      </MainBox>
+      <Segmant>HELLO PICTURES</Segmant>
+      <Segmant>HELLO INFOMATIONS</Segmant>
+      <Segmant>HELLO FOOTER</Segmant>
     </Container>
   );
 }
