@@ -1,4 +1,6 @@
 import React, { useEffect, useRef } from "react";
+import Footer from "./Components/Footer";
+import Slick from "./Components/Slick";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -10,6 +12,8 @@ const Container = styled.div`
   color: white;
 `;
 const MainBox = styled.div`
+  width: 100vw;
+  height: 100vh;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -47,6 +51,7 @@ function App() {
 
     let w = canvas.width;
     let h = canvas.height;
+    let particles = [];
 
     const opts = {
       particleColor: "rgb(200,200,200)",
@@ -125,7 +130,6 @@ function App() {
       };
     };
 
-    let particles = [];
     function setup() {
       for (let i = 0; i < opts.particleAmount; i++) {
         particles.push(new Particle());
@@ -164,7 +168,10 @@ function App() {
       </MainBox>
       <Segmant>HELLO PICTURES</Segmant>
       <Segmant>HELLO INFOMATIONS</Segmant>
-      <Segmant>HELLO FOOTER</Segmant>
+      <Segmant>HELLO INFOMATIONS</Segmant>
+      <Slick rtl={false}></Slick>
+      <Slick rtl={true}></Slick>
+      <Footer></Footer>
     </Container>
   );
 }
