@@ -5,11 +5,15 @@ import styled from "styled-components";
 const SlickContainer = styled.div`
   width: 600px;
   height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: green;
 `;
 const PicBox = styled.div`
-  height: 400px;
-  background-color: red;
+  width: 300px;
+  height: 300px;
+  background-color: hotpink;
 `;
 const PicItem = styled.div`
   width: 300px;
