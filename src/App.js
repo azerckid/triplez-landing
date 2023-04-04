@@ -41,6 +41,7 @@ const Segmant = styled.div`
   height: 300px;
   background-color: blue;
 `;
+
 function App() {
   const canvasRef = useRef(null);
 
@@ -170,7 +171,6 @@ function App() {
       <Segmant>HELLO INFOMATIONS</Segmant>
       <Segmant>HELLO INFOMATIONS</Segmant>
       <Slick rtl={false}></Slick>
-      <Slick rtl={true}></Slick>
       <Footer></Footer>
     </Container>
   );

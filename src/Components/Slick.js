@@ -3,12 +3,13 @@ import Slider from "react-slick";
 import styled from "styled-components";
 
 const SlickContainer = styled.div`
-  width: 360px;
-  background-color: red;
+  width: 600px;
+  height: 500px;
+  background-color: green;
 `;
 const PicBox = styled.div`
   height: 400px;
-  flex-direction: row;
+  background-color: red;
 `;
 const PicItem = styled.div`
   width: 300px;
@@ -19,7 +20,7 @@ const PicItem = styled.div`
   border-radius: 150px;
   font-size: 48px;
   color: whitesmoke;
-  background-color: rebeccapurple;
+  background-color: yellowgreen;
 `;
 
 function Slick({ rtl }) {
@@ -27,7 +28,7 @@ function Slick({ rtl }) {
     dots: false,
     infinite: true,
     slidesToShow: 1,
-    slidesToScroll: 2,
+    slidesToScroll: 1,
     autoplay: true,
     speed: 2000,
     autoplaySpeed: 2000,
@@ -41,12 +42,6 @@ function Slick({ rtl }) {
       <Slider {...settings}>
         <PicBox>
           <PicItem>1</PicItem>
-        </PicBox>
-        <PicBox>
-          <PicItem>2</PicItem>
-        </PicBox>
-        <PicBox>
-          <PicItem>3</PicItem>
         </PicBox>
       </Slider>
     </SlickContainer>
